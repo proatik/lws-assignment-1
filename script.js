@@ -198,8 +198,9 @@ const attachEventsListener = () => {
 
       const matchId = Number(this.dataset.matchId);
       const value = Number(this.elements.increment.value);
+      const absValue = Math.abs(value);
 
-      store.dispatch(increment(matchId, value));
+      store.dispatch(increment(matchId, absValue));
     });
   });
 
@@ -209,8 +210,9 @@ const attachEventsListener = () => {
 
       const matchId = Number(this.dataset.matchId);
       const value = Number(this.elements.decrement.value);
+      const absValue = Math.abs(value);
 
-      store.dispatch(decrement(matchId, value));
+      store.dispatch(decrement(matchId, absValue));
     });
   });
 };
